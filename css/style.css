@@ -1,0 +1,45 @@
+.header-company-logo {
+    width: 142px;
+    height: 30px;
+}
+
+
+.header-container {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+}
+
+
+.search-icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+
+.notification-icon-svg {
+    width: 21px;
+    height: 21px;
+
+    opacity: 1;
+
+    color: #000;
+}
+
+.input-search-field {
+
+    /* UI Properties */
+    text-align: left;
+    font: normal normal normal 16px/21px Roboto;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+
+}
+
+
+
+.dropdown-menu {
+    width: 110px !important;
+    --bs-dropdown-min-width: unset;
+}
