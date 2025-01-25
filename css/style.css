@@ -14,6 +14,7 @@
     align-items: center;
     justify-content: center;
     height: 100%;
+
 }
 
 
@@ -42,4 +43,120 @@
 .dropdown-menu {
     width: 110px !important;
     --bs-dropdown-min-width: unset;
+}
+
+svg {
+    width: 15px;
+    height: 15px;
+
+}
+
+.active .sidebar-text {
+    color: #C8242F;
+}
+
+.sidebar-text {
+    width: 60px;
+    height: 21px;
+    /* UI Properties */
+    text-align: left;
+    font: normal normal normal 16px/21px Roboto;
+    letter-spacing: 0px;
+    color: #3E3E3E;
+    opacity: 1;
+}
+
+
+a .active {
+    background-color: #FFF3F4;
+}
+
+.content-div {
+    background-color: #FAFAFA;
+}
+
+
+
+
+
+/*  */
+
+/* Ensure the inputs behave responsively */
+.input_wrap {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    /* margin-bottom: 1rem; */
+}
+
+input[type="text"],
+input[type="password"] {
+    border: 1px solid #ADADAD;
+    border-radius: 5px;
+    font: normal normal normal 15px/20px Roboto;
+    height: 47px;
+    width: 100%;
+    /* Make the input field take full width of its parent */
+    color: #000000;
+    font-size: 14px;
+    padding-left: 20px;
+    box-shadow: none;
+}
+
+input:disabled {
+    border: 1px dashed #ADADAD;
+}
+
+
+
+/* Label style after the input field is in focus */
+input:focus+label,
+input:valid+label {
+    font-size: 12px;
+    color: #afbdcf;
+    top: -5px;
+    left: 10px;
+    background: #ffffff;
+    padding: 0px 5px;
+}
+
+/* Styling for the label */
+.input_wrap label {
+    font-family: arial;
+    font-size: 16px;
+    color: #afbdcf !important;
+    padding: 14px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.2s ease all;
+    pointer-events: none;
+}
+
+/* Remove the default focus outline */
+input[type="text"]:focus,
+input[type="password"]:focus {
+    outline: none;
+}
+
+
+
+
+/* Label style when the input has a value or is focused */
+input:focus+label,
+input:not(:empty)+label,
+input:disabled+label {
+    font-size: 12px;
+    color: #afbdcf;
+    top: -5px;
+    left: 10px;
+    background: #ffffff;
+    padding: 0px 5px;
+}
+
+/* Styling for disabled inputs */
+input:disabled {
+    background-color: #FFFFFF;
+    color: #ADADAD;
+    /* Subtle gray text */
 }

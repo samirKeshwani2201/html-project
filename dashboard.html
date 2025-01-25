@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,67 +12,380 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+
     <script src="./js/bootstrap.bundle.min.js"></script>
 
-
 </head>
-<nav class="navbar navbar-expand-lg bg-light header-container p-2">
-    <div class="container-fluid">
-        <a class=" border navbar-brand" href="#">
-            <img src="images/menu-bar.svg" alt="">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
-            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
 
-        <div class="collapse navbar-collapse" id="navbarText">
-            <ul class="navbar-nav border w-100 ">
-                <li class="nav-item d-flex align-items-center justify-content-center border">
-                    <a class="nav-link active" aria-current="page" href="#">
-                        <img class="header-company-logo" src="images/logo.svg" alt="">
-                    </a>
-                </li>
-                <li class="input-group rounded border">
-                    <span class="input-group-text border-0 border" id="search-addon">
-                        <i class="fas fa-search"></i>
-                    </span>
-                    <input type="search " class="form-control rounded  m-auto" placeholder="Search" aria-label="Search"
-                        aria-describedby="search-addon" />
-                </li>
+<body>
 
+    <nav class="navbar navbar-expand-lg bg-white header-container  border-2 border-danger">
+        <div class="container-fluid">
+            <a class="border navbar-brand" href="#" id="menuToggle">
+                <img class="p-4 m-2" src="images/menu-bar.svg" alt="Menu Bar">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-                <li class="nav-item   d-flex  justify-content-cente align-items-center m-3 border ">
-
-                    <a class="nav-link " href="#">
-                        <img class="notification-icon-svg" src="images/notification-icon.svg" alt="">
-                    </a>
-                </li>
-                <li class="nav-item border d-flex">
-                    <div class="d-flex align-items-center">
-                        <img src="images/profile.png" alt="" class="me-2 border">
-                        <div class="dropdown border">
-                            <button class="btn btn-light dropdown-toggle border" type="button" id="dropdownMenuButton1"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                John Doe
-                            </button>
-                            <ul class="dropdown-menu w-auto dropdown-menu border" aria-labelledby="dropdownMenuButton1">
-                                <li><a class="dropdown-item" href="#">Ac </a></li>
-                                <li><a class="dropdown-item" href="#">Ano ion</a></li>
-                                <li><a class="dropdown-item" href="#">ome</a></li>
-                            </ul>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav border w-100">
+                    <li class="nav-item d-flex align-items-center justify-content-center border">
+                        <a class="nav-link active" aria-current="page" href="#">
+                            <img class="header-company-logo" src="images/logo.svg" alt="Company Logo">
+                        </a>
+                    </li>
+                    <li class="input-group rounded border">
+                        <span class="input-group-text border-0 border" id="search-addon">
+                            <i class="fas fa-search"></i>
+                        </span>
+                        <input type="search" class="form-control rounded m-auto" placeholder="Search"
+                            aria-label="Search" aria-describedby="search-addon" />
+                    </li>
+                    <li class="nav-item border border-primary m-4 d-flex justify-content-center align-items-center">
+                        <a class="nav-link" href="#">
+                            <img class="notification-icon-svg" src="images/notification-icon.svg" alt="Notifications">
+                        </a>
+                    </li>
+                    <li class="nav-item border d-flex">
+                        <div class="d-flex align-items-center">
+                            <img src="images/profile.png" alt="Profile" class="me-2 border">
+                            <div class="dropdown border">
+                                <button class="btn btn-light dropdown-toggle border" type="button"
+                                    id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    John Doe
+                                </button>
+                                <ul class="dropdown-menu w-auto dropdown-menu border"
+                                    aria-labelledby="dropdownMenuButton1">
+                                    <li><a class="dropdown-item" href="#">Account</a></li>
+                                    <li><a class="dropdown-item" href="#">Another Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something Else</a></li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sidebar and Content Section -->
+    <div class="d-flex">
+        <!-- Sidebar -->
+        <div class="bg-white border p-4 m-2" id="sidebar" style="width: 250px; min-height: 100vh;">
+            <ul class="nav flex-column p-3">
+                <li class="nav-item">
+                    <a class="nav-link active d-flex justify-content-start  align-items-center "
+                        style="background-color: #FFF3F4;;" href="#">
+                        <svg class="me-2" width="100%" height="100%" viewBox="0 0 21 21" version="1.1"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            xml:space="preserve" xmlns:serif="http://www.serif.com/"
+                            style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+                            <g transform="matrix(1,0,0,1,0.5,0)">
+                                <path
+                                    d="M15.833,3L4.167,3C3.25,3 2.5,3.75 2.5,4.667L2.5,16.333C2.5,17.25 3.25,18 4.167,18L15.833,18C16.75,18 17.5,17.25 17.5,16.333L17.5,4.667C17.5,3.75 16.75,3 15.833,3ZM4.167,16.333L4.167,4.667L9.167,4.667L9.167,16.333L4.167,16.333ZM15.833,16.333L10.833,16.333L10.833,10.5L15.833,10.5L15.833,16.333ZM15.833,8.833L10.833,8.833L10.833,4.667L15.833,4.667L15.833,8.833Z"
+                                    style="fill:rgb(200,36,47);fill-rule:nonzero;" />
+                            </g>
+                        </svg>
+                        <span class="sidebar-text"> Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link d-flex justify-content-start  align-items-center" href="#">
+                        <svg class="me-2" width="100%" height="100%" viewBox="0 0 21 21" version="1.1"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            xml:space="preserve" xmlns:serif="http://www.serif.com/"
+                            style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+                            <g transform="matrix(1,0,0,1,0.5,0)">
+                                <path
+                                    d="M16.875,1.75C16.334,1.75 15.807,1.925 15.374,2.25C14.942,2.574 14.626,3.031 14.475,3.55C14.323,4.07 14.345,4.624 14.536,5.131C14.727,5.637 15.077,6.068 15.533,6.358L13.902,12.068C13.852,12.064 13.801,12.063 13.75,12.063C13.212,12.062 12.689,12.236 12.258,12.558L9.244,10.046C9.387,9.623 9.414,9.169 9.321,8.732C9.229,8.295 9.022,7.89 8.72,7.561C8.419,7.231 8.034,6.988 7.607,6.857C7.18,6.727 6.726,6.713 6.291,6.817C5.857,6.921 5.458,7.14 5.137,7.451C4.816,7.761 4.584,8.152 4.465,8.583C4.346,9.013 4.345,9.468 4.462,9.899C4.578,10.331 4.808,10.723 5.127,11.035L3.358,14.574C3.281,14.566 3.203,14.563 3.125,14.563C2.526,14.562 1.947,14.776 1.492,15.166C1.038,15.556 0.738,16.096 0.647,16.688C0.557,17.28 0.682,17.885 0.999,18.392C1.317,18.9 1.806,19.278 2.377,19.456C2.949,19.634 3.566,19.601 4.116,19.363C4.665,19.125 5.111,18.698 5.373,18.16C5.635,17.621 5.695,17.006 5.542,16.427C5.389,15.848 5.034,15.343 4.541,15.004L6.213,11.66C6.619,11.772 7.047,11.78 7.456,11.682C7.866,11.583 8.244,11.383 8.556,11.099L11.474,13.531C11.275,13.968 11.207,14.452 11.277,14.927C11.346,15.401 11.551,15.846 11.866,16.207C12.181,16.569 12.593,16.832 13.054,16.965C13.514,17.099 14.004,17.097 14.463,16.96C14.923,16.824 15.333,16.558 15.646,16.194C15.959,15.83 16.16,15.384 16.226,14.91C16.293,14.435 16.221,13.951 16.02,13.515C15.818,13.08 15.496,12.712 15.092,12.455L16.723,6.745C16.773,6.748 16.824,6.75 16.875,6.75C17.538,6.75 18.174,6.487 18.643,6.018C19.112,5.549 19.375,4.913 19.375,4.25C19.375,3.587 19.112,2.951 18.643,2.482C18.174,2.013 17.538,1.75 16.875,1.75ZM3.125,18.313C2.878,18.313 2.636,18.239 2.431,18.102C2.225,17.965 2.065,17.769 1.97,17.541C1.876,17.312 1.851,17.061 1.899,16.819C1.947,16.576 2.066,16.353 2.241,16.179C2.416,16.004 2.639,15.885 2.881,15.836C3.124,15.788 3.375,15.813 3.603,15.908C3.832,16.002 4.027,16.163 4.164,16.368C4.302,16.574 4.375,16.815 4.375,17.063C4.375,17.394 4.243,17.712 4.008,17.946C3.774,18.18 3.456,18.312 3.125,18.313ZM6.875,10.5C6.628,10.5 6.386,10.427 6.181,10.289C5.975,10.152 5.815,9.957 5.72,9.728C5.626,9.5 5.601,9.249 5.649,9.006C5.697,8.764 5.816,8.541 5.991,8.366C6.166,8.191 6.389,8.072 6.631,8.024C6.874,7.976 7.125,8.001 7.353,8.095C7.582,8.19 7.777,8.35 7.914,8.556C8.052,8.761 8.125,9.003 8.125,9.25C8.125,9.581 7.993,9.899 7.758,10.134C7.524,10.368 7.206,10.5 6.875,10.5ZM13.75,15.813C13.503,15.813 13.261,15.739 13.056,15.602C12.85,15.464 12.69,15.269 12.595,15.041C12.501,14.812 12.476,14.561 12.524,14.319C12.572,14.076 12.691,13.853 12.866,13.679C13.041,13.504 13.264,13.385 13.506,13.336C13.749,13.288 14,13.313 14.228,13.408C14.457,13.502 14.652,13.663 14.789,13.868C14.927,14.074 15,14.315 15,14.563C15,14.894 14.868,15.212 14.634,15.446C14.399,15.68 14.081,15.812 13.75,15.813ZM16.875,5.5C16.628,5.5 16.386,5.427 16.18,5.289C15.975,5.152 15.815,4.957 15.72,4.728C15.626,4.5 15.601,4.249 15.649,4.006C15.697,3.764 15.816,3.541 15.991,3.366C16.166,3.191 16.389,3.072 16.631,3.024C16.874,2.976 17.125,3.001 17.353,3.095C17.582,3.19 17.777,3.35 17.914,3.556C18.052,3.761 18.125,4.003 18.125,4.25C18.125,4.581 17.993,4.899 17.759,5.133C17.524,5.368 17.206,5.5 16.875,5.5Z"
+                                    style="fill-rule:nonzero;" />
+                            </g>
+                        </svg>
+                        <span class="sidebar-text"> Analysis</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link d-flex justify-content-start  align-items-center" href="#">
+                        <svg class="me-2" width="100%" height="100%" viewBox="0 0 21 21" version="1.1"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            xml:space="preserve" xmlns:serif="http://www.serif.com/"
+                            style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+                            <g transform="matrix(1,0,0,1,0.5,0)">
+                                <path
+                                    d="M17.289,9.217L17.285,9.201L15.094,3.633C14.996,3.318 14.705,3.102 14.375,3.102L5.492,3.102C5.16,3.102 4.865,3.322 4.771,3.641L2.723,9.152L2.717,9.166L2.713,9.182C2.688,9.277 2.68,9.375 2.693,9.471C2.691,9.502 2.689,9.533 2.689,9.564L2.689,16.711C2.69,17.026 2.815,17.328 3.038,17.55C3.26,17.773 3.562,17.898 3.877,17.898L16.127,17.898C16.781,17.898 17.315,17.365 17.316,16.711L17.316,9.564C17.316,9.539 17.316,9.514 17.315,9.492C17.322,9.396 17.315,9.305 17.289,9.217ZM11.512,8.377L11.506,8.684C11.49,9.561 10.885,10.15 10,10.15C9.568,10.15 9.197,10.012 8.93,9.748C8.662,9.484 8.516,9.117 8.508,8.684L8.502,8.377L4.482,8.377L6.035,4.602L13.832,4.602L15.428,8.377L11.512,8.377ZM4.188,9.877L7.26,9.877C7.734,10.992 8.744,11.65 10.002,11.65C10.66,11.65 11.272,11.467 11.766,11.119C12.199,10.815 12.537,10.389 12.756,9.877L15.813,9.877L15.813,16.398L4.188,16.398L4.188,9.877Z"
+                                    style="fill-rule:nonzero;" />
+                            </g>
+                        </svg> <span class="sidebar-text"> Inbox</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link d-flex justify-content-start  align-items-center" href="#">
+                        <svg class="me-2" width="100%" height="100%" viewBox="0 0 21 21" version="1.1"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            xml:space="preserve" xmlns:serif="http://www.serif.com/"
+                            style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+                            <g transform="matrix(1,0,0,1,0.5,0)">
+                                <path
+                                    d="M9.372,2.525C10.987,2.398 12.603,2.764 14.006,3.575C15.408,4.386 16.531,5.604 17.227,7.067C17.922,8.53 18.157,10.17 17.899,11.77C17.642,13.37 16.906,14.853 15.787,16.025C14.668,17.197 13.219,18.001 11.633,18.332C10.047,18.663 8.398,18.504 6.904,17.877C5.411,17.25 4.142,16.184 3.267,14.82C2.393,13.456 1.952,11.859 2.005,10.24C2.008,10.142 2.03,10.045 2.071,9.955C2.111,9.865 2.169,9.784 2.241,9.716C2.312,9.649 2.397,9.596 2.489,9.561C2.581,9.526 2.679,9.51 2.778,9.513C2.876,9.515 2.973,9.538 3.063,9.578C3.153,9.619 3.234,9.676 3.301,9.748C3.369,9.82 3.422,9.904 3.457,9.996C3.492,10.088 3.508,10.187 3.505,10.285C3.454,11.818 3.947,13.319 4.897,14.524C5.846,15.728 7.191,16.558 8.693,16.867C10.196,17.175 11.759,16.943 13.106,16.21C14.454,15.478 15.499,14.292 16.056,12.864C16.614,11.435 16.649,9.855 16.154,8.403C15.66,6.952 14.668,5.722 13.353,4.931C12.039,4.14 10.488,3.839 8.974,4.082C7.459,4.324 6.079,5.094 5.078,6.256L4.874,6.504L7.253,6.504L7.355,6.512C7.535,6.537 7.699,6.626 7.818,6.762C7.937,6.899 8.003,7.074 8.003,7.255C8.003,7.436 7.937,7.611 7.818,7.748C7.699,7.884 7.535,7.973 7.355,7.998L7.253,8.005L3.253,8.005L3.151,7.998C2.989,7.976 2.838,7.901 2.723,7.785C2.607,7.67 2.532,7.519 2.51,7.357L2.503,7.255L2.503,3.255L2.51,3.153C2.532,2.991 2.607,2.84 2.723,2.725C2.838,2.609 2.989,2.534 3.151,2.512L3.253,2.505L3.355,2.512C3.517,2.534 3.668,2.609 3.783,2.725C3.899,2.84 3.974,2.991 3.996,3.153L4.003,3.255L4.002,5.208C5.375,3.649 7.301,2.687 9.372,2.526L9.372,2.525ZM9.75,6.504L9.852,6.511C10.014,6.533 10.165,6.608 10.28,6.724C10.396,6.839 10.471,6.99 10.493,7.152L10.5,7.254L10.5,10.499L12.25,10.5L12.352,10.507C12.532,10.531 12.698,10.62 12.818,10.756C12.937,10.893 13.004,11.069 13.004,11.251C13.004,11.432 12.937,11.608 12.818,11.745C12.698,11.882 12.532,11.97 12.352,11.994L12.25,12L9.75,12L9.648,11.994C9.486,11.972 9.335,11.897 9.219,11.781C9.104,11.665 9.029,11.514 9.007,11.352L9,11.25L9,7.254L9.007,7.152C9.029,6.99 9.104,6.839 9.22,6.724C9.335,6.608 9.486,6.533 9.648,6.511L9.75,6.504Z"
+                                    style="fill-rule:nonzero;" />
+                            </g>
+                        </svg>
+                        <span class="sidebar-text"> History</span></a>
                 </li>
 
+                <li class="nav-item">
+                    <a class="nav-link d-flex justify-content-start  align-items-center" href="#">
+                        <svg class="me-2" width="100%" height="100%" viewBox="0 0 21 21" version="1.1"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            xml:space="preserve" xmlns:serif="http://www.serif.com/"
+                            style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;">
+                            <g transform="matrix(1,0,0,1,0.5,2e-05)">
+                                <path
+                                    d="M5.833,14.667C6.984,14.667 7.917,13.734 7.917,12.583C7.917,11.433 6.984,10.5 5.833,10.5C4.683,10.5 3.75,11.433 3.75,12.583C3.75,13.734 4.683,14.667 5.833,14.667Z"
+                                    style="fill:none;stroke:black;stroke-width:1.67px;" />
+                                <path
+                                    d="M14.167,14.667C15.317,14.667 16.25,13.734 16.25,12.583C16.25,11.433 15.317,10.5 14.167,10.5C13.016,10.5 12.083,11.433 12.083,12.583C12.083,13.734 13.016,14.667 14.167,14.667Z"
+                                    style="fill:none;stroke:black;stroke-width:1.67px;" />
+                                <path
+                                    d="M10,6.333C11.151,6.333 12.083,5.401 12.083,4.25C12.083,3.099 11.151,2.167 10,2.167C8.849,2.167 7.917,3.099 7.917,4.25C7.917,5.401 8.849,6.333 10,6.333Z"
+                                    style="fill:none;stroke:black;stroke-width:1.67px;" />
+                                <path
+                                    d="M10,18.833C10,16.532 8.135,14.667 5.833,14.667C3.532,14.667 1.667,16.532 1.667,18.833"
+                                    style="fill:none;stroke:black;stroke-width:1.67px;" />
+                                <path
+                                    d="M18.333,18.833C18.333,16.532 16.468,14.667 14.167,14.667C11.865,14.667 10,16.532 10,18.833"
+                                    style="fill:none;stroke:black;stroke-width:1.67px;" />
+                                <path
+                                    d="M14.167,10.5C14.167,8.199 12.301,6.333 10,6.333C7.699,6.333 5.833,8.199 5.833,10.5"
+                                    style="fill:none;stroke:black;stroke-width:1.67px;" />
+                            </g>
+                        </svg>
+                        <span class="sidebar-text"> Users</span></a>
+                </li>
 
+                <li class="nav-item">
+                    <a class="d-flex nav-link  justify-content-start  align-items-center" href="#">
+                        <svg class=" me-2" width="100%" height="100%" viewBox="0 0 21 21" version="1.1"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            xml:space="preserve" xmlns:serif="http://www.serif.com/"
+                            style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+                            <g transform="matrix(1,0,0,1,-0.62495,0)">
+                                <g transform="matrix(1,0,0,1,0.5,0)">
+                                    <path
+                                        d="M18.567,12.558L16.692,10.683C16.575,10.566 16.416,10.5 16.25,10.5C16.084,10.5 15.925,10.566 15.808,10.683L10,16.491L10,19.25L12.759,19.25L18.567,13.442C18.684,13.325 18.75,13.166 18.75,13C18.75,12.834 18.684,12.675 18.567,12.558ZM12.241,18L11.25,18L11.25,17.009L14.375,13.884L15.366,14.875L12.241,18ZM16.25,13.991L15.259,13L16.25,12.009L17.241,13L16.25,13.991Z"
+                                        style="fill-rule:nonzero;" />
+                                </g>
+                                <g transform="matrix(1,0,0,1,0.5,0)">
+                                    <path
+                                        d="M12.5,8.625L12.5,7.375L11.161,7.375C11.103,7.151 11.014,6.937 10.896,6.738L11.844,5.79L10.96,4.906L10.012,5.854C9.813,5.736 9.599,5.647 9.375,5.589L9.375,4.25L8.125,4.25L8.125,5.589C7.901,5.647 7.687,5.736 7.488,5.854L6.54,4.906L5.656,5.79L6.604,6.738C6.486,6.937 6.397,7.151 6.339,7.375L5,7.375L5,8.625L6.339,8.625C6.397,8.849 6.486,9.063 6.604,9.262L5.656,10.21L6.54,11.094L7.488,10.146C7.687,10.264 7.901,10.353 8.125,10.411L8.125,11.75L9.375,11.75L9.375,10.411C9.599,10.353 9.813,10.264 10.012,10.146L10.96,11.094L11.844,10.21L10.896,9.262C11.014,9.063 11.103,8.849 11.161,8.625L12.5,8.625ZM8.75,9.25C8.503,9.25 8.261,9.177 8.056,9.039C7.85,8.902 7.69,8.707 7.595,8.478C7.501,8.25 7.476,7.999 7.524,7.756C7.572,7.514 7.691,7.291 7.866,7.116C8.041,6.941 8.264,6.822 8.506,6.774C8.749,6.726 9,6.751 9.228,6.845C9.457,6.94 9.652,7.1 9.789,7.306C9.927,7.511 10,7.753 10,8C10,8.331 9.868,8.649 9.634,8.884C9.399,9.118 9.081,9.25 8.75,9.25Z"
+                                        style="fill-rule:nonzero;" />
+                                </g>
+                                <g transform="matrix(1,0,0,1,0.5,0)">
+                                    <path
+                                        d="M7.5,19.25L3.75,19.25C3.419,19.25 3.101,19.118 2.866,18.884C2.632,18.649 2.5,18.331 2.5,18L2.5,3C2.5,2.669 2.632,2.351 2.866,2.116C3.101,1.882 3.419,1.75 3.75,1.75L13.75,1.75C14.081,1.75 14.399,1.882 14.634,2.116C14.868,2.351 15,2.669 15,3L15,9.25L13.75,9.25L13.75,3L3.75,3L3.75,18L7.5,18L7.5,19.25Z"
+                                        style="fill-rule:nonzero;" />
+                                </g>
+                            </g>
+                        </svg>
+                        <span class="sidebar-text"> Maintenance</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link d-flex justify-content-start  align-items-center" href="#">
+                        <svg class="me-2" width="100%" height="100%" viewBox="0 0 21 21" version="1.1"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            xml:space="preserve" xmlns:serif="http://www.serif.com/"
+                            style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+                            <g transform="matrix(1,0,0,1,0.501968,0.00354)">
+                                <path
+                                    d="M18.063,12.721L16.783,11.627C16.844,11.256 16.875,10.877 16.875,10.498C16.875,10.119 16.844,9.74 16.783,9.369L18.063,8.275C18.159,8.193 18.228,8.083 18.261,7.96C18.293,7.837 18.287,7.707 18.244,7.588L18.227,7.537C17.874,6.553 17.347,5.64 16.67,4.844L16.635,4.803C16.553,4.706 16.443,4.637 16.321,4.604C16.198,4.57 16.069,4.575 15.949,4.617L14.361,5.182C13.775,4.701 13.121,4.322 12.414,4.057L12.107,2.396C12.084,2.272 12.024,2.157 11.934,2.067C11.844,1.977 11.729,1.917 11.604,1.895L11.551,1.885C10.533,1.701 9.463,1.701 8.445,1.885L8.393,1.895C8.268,1.917 8.152,1.977 8.062,2.067C7.972,2.157 7.912,2.272 7.889,2.396L7.58,4.064C6.879,4.33 6.226,4.709 5.646,5.186L4.047,4.617C3.927,4.575 3.798,4.57 3.675,4.603C3.553,4.636 3.443,4.706 3.361,4.803L3.326,4.844C2.65,5.641 2.123,6.553 1.77,7.537L1.752,7.588C1.664,7.832 1.736,8.105 1.934,8.275L3.229,9.381C3.168,9.748 3.139,10.123 3.139,10.496C3.139,10.871 3.168,11.246 3.229,11.611L1.934,12.717C1.837,12.799 1.768,12.909 1.736,13.032C1.703,13.155 1.709,13.285 1.752,13.404L1.77,13.455C2.123,14.44 2.646,15.348 3.326,16.148L3.361,16.189C3.443,16.286 3.553,16.355 3.675,16.389C3.798,16.422 3.927,16.417 4.047,16.375L5.646,15.807C6.229,16.285 6.879,16.664 7.58,16.928L7.889,18.596C7.912,18.721 7.972,18.836 8.062,18.925C8.152,19.015 8.268,19.075 8.393,19.098L8.445,19.107C9.472,19.292 10.524,19.292 11.551,19.107L11.604,19.098C11.729,19.075 11.844,19.015 11.934,18.925C12.024,18.836 12.084,18.721 12.107,18.596L12.414,16.936C13.121,16.671 13.779,16.291 14.361,15.81L15.949,16.375C16.069,16.417 16.198,16.422 16.321,16.389C16.443,16.356 16.553,16.286 16.635,16.189L16.67,16.148C17.35,15.346 17.873,14.44 18.227,13.455L18.244,13.404C18.332,13.164 18.26,12.891 18.063,12.721ZM15.397,9.6C15.445,9.895 15.471,10.197 15.471,10.5C15.471,10.803 15.445,11.105 15.397,11.4L15.268,12.184L16.727,13.432C16.505,13.941 16.226,14.424 15.895,14.869L14.082,14.227L13.469,14.73C13.002,15.113 12.482,15.414 11.92,15.625L11.176,15.904L10.826,17.799C10.275,17.861 9.718,17.861 9.166,17.799L8.816,15.9L8.078,15.617C7.521,15.406 7.004,15.105 6.541,14.725L5.928,14.219L4.104,14.867C3.771,14.42 3.494,13.938 3.271,13.43L4.746,12.17L4.619,11.389C4.572,11.098 4.547,10.797 4.547,10.5C4.547,10.201 4.57,9.902 4.619,9.611L4.746,8.83L3.271,7.57C3.492,7.061 3.771,6.58 4.104,6.133L5.928,6.781L6.541,6.275C7.004,5.895 7.521,5.594 8.078,5.383L8.818,5.104L9.168,3.205C9.717,3.143 10.277,3.143 10.828,3.205L11.178,5.1L11.922,5.379C12.482,5.59 13.004,5.891 13.471,6.273L14.084,6.777L15.897,6.135C16.229,6.582 16.506,7.064 16.729,7.572L15.27,8.82L15.397,9.6ZM10,6.867C8.102,6.867 6.563,8.406 6.563,10.305C6.563,12.203 8.102,13.742 10,13.742C11.898,13.742 13.438,12.203 13.438,10.305C13.438,8.406 11.898,6.867 10,6.867ZM11.547,11.852C11.344,12.055 11.103,12.216 10.837,12.326C10.572,12.436 10.287,12.493 10,12.492C9.416,12.492 8.867,12.264 8.453,11.852C8.25,11.649 8.088,11.408 7.978,11.142C7.868,10.877 7.812,10.592 7.813,10.305C7.813,9.721 8.041,9.172 8.453,8.758C8.867,8.344 9.416,8.117 10,8.117C10.584,8.117 11.133,8.344 11.547,8.758C11.75,8.961 11.912,9.202 12.022,9.467C12.132,9.733 12.188,10.017 12.188,10.305C12.188,10.889 11.959,11.438 11.547,11.852Z"
+                                    style="fill-rule:nonzero;" />
+                            </g>
+                        </svg><span class="sidebar-text"> Setting</span></a>
+                </li>
 
             </ul>
+        </div>
+
+        <!-- Content Section -->
+        <div class="flex-grow-1 p-4 border border-danger content-div m-2 p-2">
+
+            <h1 class="mb-3 border border-primary fs-4">Analysis</h1>
+            <div class="colom-container bg-white p-2 border-primary">
+
+                <div class=" bg-white mb-2 p-2 border border-primary">
+
+
+                    <h4 class="mb-3 fs-6">One Column</h4>
+                    <div class="input-group   input_wrap mb-2">
+                        
+                        <!-- <input type="text" class="form-control  " placeholder="Name" aria-label="Recipient's username"
+                            aria-describedby="basic-addon2"> -->
+
+                        <input type="text" required />
+                        <label>Name</label>
+
+
+                    </div>
+
+                    <div class="input-group mb-3 ">
+                        <select class="form-select text-secondary" id="inputGroupSelect03"
+                            aria-label="Example select with button addon">
+                            <option class="text-secondary" selected>Dropdown</option>
+                            <option class="text-secondary" value="1">One</option>
+                            <option class="text-secondary" value="2">Two</option>
+                            <option class="text-secondary" value="3">Three</option>
+                        </select>
+                    </div>
+
+                    <div class="form-floating mb-3 ">
+                        <textarea class="form-control text-secondary text-area-color" placeholder="Multiple Line"
+                            id="floatingTextarea2" style="height: 100px; "></textarea>
+                        <label for="floatingTextarea2">Multiple Line</label>
+                    </div>
+                </div>
+
+
+
+                <div class=" bg-white mb-2 mt-3 p-2 border border-primary">
+
+
+                    <h4 class="mb-3 fs-6">Two Column</h4>
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="input_wrap mb-2">
+                                <input type="text" required />
+                                <label>Name</label>
+
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="input_wrap mb-3">
+                                <input type="text" required />
+                                <label>Username</label>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col ">
+                            <div class="input_wrap mb-2">
+                                <input type="text" required />
+                                <label>Password</label>
+
+                            </div>
+                        </div>
+                        <div class="col">
+
+                            <div class="input_wrap mb-2">
+
+                                <select class="form-select text-secondary" style="height: 47px;" id="inputGroupSelect03"
+                                    aria-label="Example select with button addon">
+                                    <option selected disabled>Choose option</option>
+                                    <option class="text-secondary" value="1">One</option>
+                                    <option class="text-secondary" value="2">Two</option>
+                                    <option class="text-secondary" value="3">Three</option>
+                                </select>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class=" bg-white mb-2 mt-3 p-2 border border-primary">
+                    <h4 class="mb-3 fs-6">Three Column</h4>
+
+                    <div class="row">
+                        <div class="col ">
+                            <div class="input_wrap mb-2">
+                                <input type="text" required />
+                                <label>Focus</label>
+                            </div>
+                        </div>
+
+                        <div class="col ">
+                            <div class="input_wrap mb-2">
+                                <input type="password" required />
+                                <label>Password</label>
+
+                            </div>
+                        </div>
+
+                        <div class="col ">
+                            <div class="input_wrap mb-2 disabled-input">
+                                <input disabled type="text" value="johndoe" />
+                                <label>Disabled</label>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class=" bg-white mb-2 mt-3 p-2 border border-primary">
+
+
+                    <h4 class="mb-3 fs-6">Four Column</h4>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control " placeholder="Name" aria-label="Recipient's username"
+                            aria-describedby="basic-addon2">
+                    </div>
+
+                    <div class="input-group mb-3 ">
+                        <select class="form-select text-secondary" id="inputGroupSelect03"
+                            aria-label="Example select with button addon">
+                            <option class="text-secondary" selected>Dropdown</option>
+                            <option class="text-secondary" value="1">One</option>
+                            <option class="text-secondary" value="2">Two</option>
+                            <option class="text-secondary" value="3">Three</option>
+                        </select>
+                    </div>
+
+                    <div class="form-floating mb-3 ">
+                        <textarea class="form-control text-secondary text-area-color" placeholder="Multiple Line"
+                            id="floatingTextarea2" style="height: 100px; "></textarea>
+                        <label for="floatingTextarea2">Multiple Line</label>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+
+
 
         </div>
+
+
     </div>
-</nav>
+    </div>
+
+
+    </div>
+    </div>
+
+    <!-- Script for Sidebar Toggle -->
+    <script>
+        const menuToggle = document.getElementById("menuToggle");
+        const sidebar = document.getElementById("sidebar");
+
+        menuToggle.addEventListener("click", () => {
+            if (sidebar.style.display === "none" || sidebar.style.display === "") {
+                sidebar.style.display = "block";
+            } else {
+                sidebar.style.display = "none";
+            }
+        });
+    </script>
 
 </body>
+
 
 </html>
